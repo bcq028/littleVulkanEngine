@@ -13,6 +13,8 @@ namespace lve{
             return glfwWindowShouldClose(window);
         }
 
+        void createWindowSurface(VkInstance instance,VkSurfaceKHR *surface);
+
         ~LveWindow();
         private:
         void initWindow();
