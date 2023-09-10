@@ -7,6 +7,12 @@ namespace lve{
     class LveWindow{
         public:
         LveWindow(const int width,const int height,const std::string window_name);
+        LveWindow(const LveWindow&)=delete;
+        LveWindow&operator=(const LveWindow&)=delete;
+        bool shouldClose(){
+            return glfwWindowShouldClose(window);
+        }
+
         ~LveWindow();
         private:
         void initWindow();
