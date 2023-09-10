@@ -11,7 +11,7 @@ find_package(Vulkan REQUIRED)
 find_package(glfw3 REQUIRED)
 
 # Add the source files
-add_executable(VulkanTest main.cpp lve_window.cpp first_app.cpp)
+add_executable(VulkanTest main.cpp lve_window.cpp first_app.cpp lve_pipeline.cpp)
 link_directories(${CMAKE_SOURCE_DIR})
 
 # Link the necessary libraries
