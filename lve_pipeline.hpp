@@ -10,7 +10,6 @@ namespace lve
     {
         VkViewport viewport;
         VkRect2D scissor;
-        VkPipelineViewportStateCreateInfo viewportInfo;
         VkPipelineInputAssemblyStateCreateInfo inputAssemblyInfo;
         VkPipelineRasterizationStateCreateInfo rasterizationInfo;
         VkPipelineMultisampleStateCreateInfo multisampleInfo;
@@ -33,6 +32,7 @@ namespace lve
         );
         ~LvePipeline(){}
         LvePipeline(const LvePipeline&)=delete;
+        void bind(VkCommandBuffer commandBuffer);
         void operator=(const LvePipeline&)=delete;
 
         static PipelineConfigInfo defaultPipelineConfigInfo(uint32_t width,uint32_t height);
