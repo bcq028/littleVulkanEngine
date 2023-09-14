@@ -182,7 +182,7 @@ namespace lve
             .codeSize = code.size(),
             .pCode = reinterpret_cast<const uint32_t *>(code.data())};
 
-        if (!vkCreateShaderModule(lve_device.device(), &createInfo, nullptr, shaderModule))
+        if (vkCreateShaderModule(lve_device.device(), &createInfo, nullptr, shaderModule)!=VK_SUCCESS)
         {
             throw std::runtime_error("failed to create shader module");
         }
